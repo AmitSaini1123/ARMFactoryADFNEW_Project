@@ -344,14 +344,7 @@
 			{
 				"name": "Success Email Message",
 				"type": "WebActivity",
-				"dependsOn": [
-					{
-						"activity": "Success",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -378,14 +371,7 @@
 			{
 				"name": "Failure Email Message",
 				"type": "WebActivity",
-				"dependsOn": [
-					{
-						"activity": "Failure",
-						"dependencyConditions": [
-							"Completed"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -412,14 +398,7 @@
 			{
 				"name": "Success Email Message Emp_data",
 				"type": "WebActivity",
-				"dependsOn": [
-					{
-						"activity": "Success_second",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
