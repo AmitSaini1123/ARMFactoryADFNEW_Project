@@ -370,7 +370,7 @@
 						"Content-Type": "application/json"
 					},
 					"body": {
-						"value": "{\n    \"Status\":\"Successful\",\n    \"DataFactoryName\":\"@{pipeline().DataFactory}\",\n    \"Pipeline\":\"@{pipeline().Pipeline}\",\n    \"ExecuteTime\":\"@{pipeline().TriggerTime}\",\n    \"Runid\":\"@{pipeline().RunId}\"\n}",
+						"value": "{\n    \"EmailTo\" :\"@{pipeline().parameters.EmailTo}\",\n    \"Status\":\"Successful\",\n    \"DataFactoryName\":\"@{pipeline().DataFactory}\",\n    \"Pipeline\":\"@{pipeline().Pipeline}\",\n    \"ExecuteTime\":\"@{pipeline().TriggerTime}\",\n    \"Runid\":\"@{pipeline().RunId}\"\n}",
 						"type": "Expression"
 					}
 				}
