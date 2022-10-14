@@ -2,7 +2,7 @@
 	"name": "Tumling Tigger",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipeline": {
 			"pipelineReference": {
 				"referenceName": "Auditing_Pipeline",
