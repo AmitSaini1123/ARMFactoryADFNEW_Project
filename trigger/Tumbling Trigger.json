@@ -1,0 +1,26 @@
+{
+	"name": "Tumbling Trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipeline": {
+			"pipelineReference": {
+				"referenceName": "Auditing_Pipeline",
+				"type": "PipelineReference"
+			}
+		},
+		"type": "TumblingWindowTrigger",
+		"typeProperties": {
+			"frequency": "Minute",
+			"interval": 5,
+			"startTime": "2022-10-14T07:26:00Z",
+			"endTime": "2022-10-15T07:30:00Z",
+			"delay": "00:00:00",
+			"maxConcurrency": 5,
+			"retryPolicy": {
+				"intervalInSeconds": 30
+			},
+			"dependsOn": []
+		}
+	}
+}
