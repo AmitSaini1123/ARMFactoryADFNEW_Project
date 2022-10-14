@@ -2,15 +2,15 @@
 	"name": "Custom trigger",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [],
 		"type": "CustomEventsTrigger",
 		"typeProperties": {
 			"subjectEndsWith": "",
 			"subjectBeginsWith": "",
-			"scope": "DefaultEndpointsProtocol=https;AccountName=armtemplatestorage;AccountKey=Y6+7YiJJ5DDizE2MswaPj8qsKAt/vp6dE8hbhHsmCYD4oWDXwtlq783ybCKpwj8EfQn/Lrt+zSig+AStVPxv3w==;EndpointSuffix=core.windows.net",
+			"scope": "CustomEventTiggger",
 			"events": [
-				"CustomEventTrigger"
+				"Event"
 			]
 		}
 	}
