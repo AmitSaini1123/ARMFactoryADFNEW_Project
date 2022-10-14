@@ -13,7 +13,7 @@
 		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathEndsWith": "https://armtemplatestorage.blob.core.windows.net/demo",
+			"blobPathEndsWith": "/demo",
 			"ignoreEmptyBlobs": true,
 			"scope": "/subscriptions/3d378703-23b0-4d87-942b-3c48ff3a2d31/resourceGroups/ARM_Template/providers/Microsoft.Storage/storageAccounts/armtemplatestorage",
 			"events": [
