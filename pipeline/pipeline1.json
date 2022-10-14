@@ -344,7 +344,14 @@
 			{
 				"name": "Success Email Message",
 				"type": "WebActivity",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Success",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -363,7 +370,7 @@
 						"Content-Type": "application/json"
 					},
 					"body": {
-						"value": "{\n    \"EmailTo\" :\"@{pipeline().parameters.EmailTo}\",\n    \"Status\":\"Successful\",\n    \"DataFactoryName\":\"@{pipeline().DataFactory}\",\n    \"Pipeline\":\"@{pipeline().Pipeline}\",\n    \"ExecuteTime\":\"@{pipeline().TriggerTime}\",\n    \"Runid\":\"@{pipeline().RunId}\"\n}",
+						"value": "{\n    \"Status\":\"Successful\",\n    \"DataFactoryName\":\"@{pipeline().DataFactory}\",\n    \"Pipeline\":\"@{pipeline().Pipeline}\",\n    \"ExecuteTime\":\"@{pipeline().TriggerTime}\",\n    \"Runid\":\"@{pipeline().RunId}\"\n}",
 						"type": "Expression"
 					}
 				}
@@ -371,7 +378,14 @@
 			{
 				"name": "Failure Email Message",
 				"type": "WebActivity",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Failure",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -390,7 +404,7 @@
 						"Content-Type": "application/json"
 					},
 					"body": {
-						"value": "{\n    \"EmailTo\" :\"@{pipeline().parameters.EmailTo}\",\n    \"Status\":\"Failed\",\n    \"DataFactoryName\":\"@{pipeline().DataFactory}\",\n    \"Pipeline\":\"@{pipeline().Pipeline}\",\n    \"ExecuteTime\":\"@{pipeline().TriggerTime}\",\n    \"Runid\":\"@{pipeline().RunId}\",\n    \"ErrorMessage\" :\"@{activity('Mock_data').Error.Message}\",\n    \"TriggerId\": \"@{pipeline().TriggerId}\",\n    \"TriggerTime\": \"@{pipeline().TriggerTime}\",\n    \"TriggerType\": \"@{pipeline().TriggerType}\"\n    \n}",
+						"value": "{\n    \"Status\":\"Failed\",\n    \"DataFactoryName\":\"@{pipeline().DataFactory}\",\n    \"Pipeline\":\"@{pipeline().Pipeline}\",\n    \"ExecuteTime\":\"@{pipeline().TriggerTime}\",\n    \"Runid\":\"@{pipeline().RunId}\",\n    \"ErrorMessage\" :\"@{activity('Mock_data').Error.Message}\",\n    \"TriggerId\": \"@{pipeline().TriggerId}\",\n    \"TriggerTime\": \"@{pipeline().TriggerTime}\",\n    \"TriggerType\": \"@{pipeline().TriggerType}\"\n    \n}",
 						"type": "Expression"
 					}
 				}
@@ -398,7 +412,14 @@
 			{
 				"name": "Success Email Message Emp_data",
 				"type": "WebActivity",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Success_second",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -670,11 +691,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"EmailTo": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }
