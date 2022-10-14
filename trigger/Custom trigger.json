@@ -3,14 +3,21 @@
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Stopped",
-		"pipelines": [],
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Auditing_Pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
 		"type": "CustomEventsTrigger",
 		"typeProperties": {
 			"subjectEndsWith": "",
 			"subjectBeginsWith": "",
 			"scope": "CustomEventTiggger",
 			"events": [
-				"Event"
+				"ook"
 			]
 		}
 	}
