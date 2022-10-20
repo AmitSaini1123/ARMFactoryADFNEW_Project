@@ -1,0 +1,20 @@
+{
+	"name": "Tumling Tigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"type": "TumblingWindowTrigger",
+		"typeProperties": {
+			"frequency": "Minute",
+			"interval": 5,
+			"startTime": "2022-10-14T07:08:00Z",
+			"endTime": "2022-10-14T07:12:00Z",
+			"delay": "00:00:00",
+			"maxConcurrency": 2,
+			"retryPolicy": {
+				"intervalInSeconds": 30
+			},
+			"dependsOn": []
+		}
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"name": "Storage Events 2",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/wwert/blobs/input/",
+			"blobPathEndsWith": ".csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/3d378703-23b0-4d87-942b-3c48ff3a2d31/resourceGroups/ARM_Template/providers/Microsoft.Storage/storageAccounts/qwertyu543878",
+			"events": [
+				"Microsoft.Storage.BlobDeleted"
+			]
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"name": "ARMFactoryADFNEW",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "953fb565-db75-4e0d-9794-f9d07d535b30",
+		"tenantId": "9177515a-4b26-41e7-bbb3-b0ca193140f3"
+	}
+}
